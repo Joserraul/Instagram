@@ -6,6 +6,7 @@
 
 body {
   display: grid;
+  grid-template-columns: 15% 85%;
 }
 
 li {
@@ -14,8 +15,12 @@ li {
 
 .contenedorizquierdo {
   display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
 }
 
 .contenedorderecho > div {
   display: grid;
+  grid-template-columns: 1fr;
 }/*# sourceMappingURL=style.css.map */

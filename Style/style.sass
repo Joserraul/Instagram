@@ -1,26 +1,25 @@
+@mixin display ($display , $justify , $align , $column , $direction)
+  display: $display
+  @if $display == grid
+    grid-template-columns: $column
+  @if $display == flex
+    justify-content: $justify
+    align-items: $align
+    flex-direction: $direction
+
 *
   font-family: "Roboto", serif
   font-weight: 100
   font-style: normal
 
-
-@mixin display ($display , $justify , $align , $column , $direction)
-  display: $display
-  @if display == grid
-    grid-template-columns: $column
-  @if display == flex
-    justify-content: $justify
-    align-items: $align
-    flex-direction: $direction
-    
 body
-  @include display (grid, null, null, 15% 85%, null)
+  @include display(grid, null, null, 15% 85%, null)
 
 li
   list-style-type: none
 
 .contenedorizquierdo
-  @include display (flex , space-between , start , 1fr, column)
+  @include display(flex , space-between , start , 1fr, column)
 
 .contenedorderecho > div
   @include display(grid, center, null, 1fr, vertical)
