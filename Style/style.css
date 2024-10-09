@@ -1,0 +1,21 @@
+* {
+  font-family: "Roboto", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+}
+
+.contenedorizquierdo {
+  display: grid;
+}
+
+.contenedorderecho > div {
+  display: grid;
+}/*# sourceMappingURL=style.css.map */

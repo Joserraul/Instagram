@@ -1,0 +1,26 @@
+*
+  font-family: "Roboto", serif
+  font-weight: 100
+  font-style: normal
+
+
+@mixin display ($display , $justify , $align , $column , $direction)
+  display: $display
+  @if display == grid
+    grid-template-columns: $column
+  @if display == flex
+    justify-content: $justify
+    align-items: $align
+    flex-direction: $direction
+    
+body
+  @include display (flex, flex-center, center, 1fr 1fr, null)
+
+li
+  list-style-type: none
+
+.contenedorizquierdo
+  @include display (grid , null , null , null, vertical)
+
+.contenedorderecho > div
+  @include display(grid, center, null, 1fr, vertical)
