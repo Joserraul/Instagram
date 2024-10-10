@@ -6,16 +6,98 @@
 
 body {
   display: grid;
+  grid-template-columns: 15% 85%;
 }
 
-li {
+li > ul {
   list-style-type: none;
 }
 
 .contenedorizquierdo {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 20px 0px;
+  float: left;
 }
 
-.contenedorderecho > div {
+.contenedorderecho {
+  display: flex;
+  flex-direction: colum;
+}
+.contenedorderecho div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.contenedorderecho .datosperfil {
   display: grid;
+  grid-template-rows: column;
+  margin-left: 20px;
+}
+.contenedorderecho .datosperfil ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.contenedorderecho .datosperfil li {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.barraizquierda {
+  width: 0;
+  margin: 0;
+  float: left;
+}
+.barraizquierda ul {
+  margin: 0px 0px 10px 0;
+}
+.barraizquierda li {
+  margin-bottom: 10px;
+  padding-: 0px;
+  border: 10px;
+  position: absolute;
+}
+.barraizquierda img {
+  width: 70px;
+  height: 60px;
+}
+.barraizquierda .barraizquierda2 {
+  width: 50px;
+  margin: 0 auto;
+  float: left;
+}
+.barraizquierda .barraizquierda2 ul {
+  margin: 0px;
+}
+.barraizquierda .barraizquierda2 li {
+  margin-bottom: 10px;
+  padding-: 0px;
+  border: 2px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.datosdelperfil {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.datosdelperfil ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin: 20px;
+  width: 100%;
+}
+.datosdelperfil li {
+  display: inline-block;
+  padding: 10px;
+  border: 1px;
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */

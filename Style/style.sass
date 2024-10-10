@@ -1,26 +1,83 @@
+@mixin display ($display , $justify , $align , $column , $direction)
+  display: $display
+  @if $display == grid
+    grid-template-columns: $column
+  @if $display == flex
+    justify-content: $justify
+    align-items: $align
+    flex-direction: $direction
+
 *
   font-family: "Roboto", serif
   font-weight: 100
   font-style: normal
 
-
-@mixin display ($display , $justify , $align , $column , $direction)
-  display: $display
-  @if display == grid
-    grid-template-columns: $column
-  @if display == flex
-    justify-content: $justify
-    align-items: $align
-    flex-direction: $direction
-    
 body
-  @include display (grid, null, null, 15% 85%, null)
+  @include display(grid, null, null, 15% 85%, null)
 
-li
+li > ul
   list-style-type: none
 
 .contenedorizquierdo
-  @include display (flex , space-between , start , 1fr, column)
+  @include display(flex , space-between , flex-start , 1fr, column)
+  margin: 20px 0px
+  float: left
 
-.contenedorderecho > div
-  @include display(grid, center, null, 1fr, vertical)
+.contenedorderecho
+  @include display(flex, null, null, null, colum)
+  div
+    @include display(flex , space-between , flex-start , 1fr, row)
+  .datosperfil
+    display: grid
+    grid-template-rows: column
+    margin-left: 20px
+    ul
+      display: block
+      padding: 0
+      margin: 0
+    li
+      display: block
+      margin-bottom: 10px
+
+.barraizquierda
+  width: 0
+  margin: 0
+  float: left
+  ul
+    margin: 0px 0px 10px 0
+
+  li
+    margin-bottom: 10px
+    padding-: 0px
+    border: 10px
+    position: absolute
+  img
+    width: 70px
+    height: 60px
+
+  .barraizquierda2
+    width: 50px
+    margin: 0 auto
+    float: left
+    ul
+      margin: 0px
+    li
+      margin-bottom: 10px
+      padding-: 0px
+      border: 2px
+      position: absolute
+      left: 0
+      top: 0
+
+.datosdelperfil
+  @include display(flex, flex-start, null, null, row)
+  ul
+    @include display(flex, null, center, null, row)
+    padding: 0
+    margin: 20px
+    width: 100%
+  li
+    display: inline-block
+    padding: 10px
+    border: 1px
+    margin-right: 10px
