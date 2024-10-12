@@ -1,103 +1,86 @@
-* {
-  font-family: "Roboto", serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-body {
+.contenedorbase {
   display: grid;
   grid-template-columns: 15% 85%;
 }
 
-li > ul {
-  list-style-type: none;
-}
-
-.contenedorizquierdo {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  margin: 20px 0px;
-  float: left;
-}
-
-.contenedorderecho {
-  display: flex;
-  flex-direction: colum;
-}
-.contenedorderecho div {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: row;
-}
-.contenedorderecho .datosperfil {
-  display: grid;
-  grid-template-rows: column;
-  margin-left: 20px;
-}
-.contenedorderecho .datosperfil ul {
-  display: block;
-  padding: 0;
-  margin: 0;
-}
-.contenedorderecho .datosperfil li {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.barraizquierda {
-  width: 0;
-  margin: 0;
-  float: left;
-}
-.barraizquierda ul {
-  margin: 0px 0px 10px 0;
-}
-.barraizquierda li {
-  margin-bottom: 10px;
-  padding-: 0px;
-  border: 10px;
-  position: absolute;
-}
-.barraizquierda img {
-  width: 70px;
-  height: 60px;
-}
-.barraizquierda .barraizquierda2 {
-  width: 50px;
-  margin: 0 auto;
-  float: left;
-}
-.barraizquierda .barraizquierda2 ul {
-  margin: 0px;
-}
-.barraizquierda .barraizquierda2 li {
-  margin-bottom: 10px;
-  padding-: 0px;
-  border: 2px;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.datosdelperfil {
+.contenedorizquierda {
   display: flex;
   justify-content: flex-start;
-  flex-direction: row;
+  flex-direction: column;
 }
-.datosdelperfil ul {
+.contenedorizquierda div {
+  margin: 10px 0;
+}
+
+main {
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: row;
+  width: 0;
+  padding: 0px;
+}
+
+.contenedorderecha {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 0;
   padding: 0;
-  margin: 20px;
+}
+
+.baseizquierda {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 0;
+}
+.baseizquierda .datos {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+.baseizquierda .datos .datos1, .baseizquierda .datos .datos2 {
+  display: flex;
+  flex-direction: horizontal;
+  margin: 0;
+}
+.baseizquierda .datos .datos1 p, .baseizquierda .datos .datos2 p {
+  padding: 10px;
+}
+
+.fotoperfil {
+  display: inline-block;
+  width: 20px;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  height: 100px;
+  padding: 20px;
+  margin: 0;
+}
+.basehistoria {
+  gap: 0;
+  padding: 0;
+  margin: 0;
   width: 100%;
 }
-.datosdelperfil li {
-  display: inline-block;
+
+.contenedorhistoria {
+  display: flex;
+  flex-direction: horizontal;
+}
+
+.historias {
+  display: flex;
+  align-items: row;
+  flex-direction: flex-start;
+  margin: 20px 0 20px 10px;
   padding: 10px;
-  border: 1px;
-  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.fotospublicadas, img {
+  display: flex;
+  padding: 10px;
+  width: 150px;
 }/*# sourceMappingURL=style.css.map */

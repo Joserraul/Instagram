@@ -1,4 +1,4 @@
-@mixin display ($display , $justify , $align , $column , $direction)
+@mixin display($display, $justify, $align, $column, $direction)
   display: $display
   @if $display == grid
     grid-template-columns: $column
@@ -7,77 +7,71 @@
     align-items: $align
     flex-direction: $direction
 
-*
-  font-family: "Roboto", serif
-  font-weight: 100
-  font-style: normal
+.contenedorbase
+  @include display(grid, null, null, 15% 85%, null) // Dividir la barra lateral y el contenido en un grid
 
-body
-  @include display(grid, null, null, 15% 85%, null)
-
-li > ul
-  list-style-type: none
-
-.contenedorizquierdo
-  @include display(flex , space-between , flex-start , 1fr, column)
-  margin: 20px 0px
-  float: left
-
-.contenedorderecho
-  @include display(flex, null, null, null, colum)
+.contenedorizquierda
+  @include display(flex, flex-start, null, null, column) // Alinear la barra lateral en columna
   div
-    @include display(flex , space-between , flex-start , 1fr, row)
-  .datosperfil
+    margin: 10px 0 // Espacio entre elementos
+
+main
+  @include display(flex, flex-start, flex-start, null, row) // Alinea el contenido del main en fila
+  width: 0 // Asegura que ocupe todo el ancho
+  padding: 0px // Espacio alrededor del contenido
+
+.contenedorderecha
+  @include display(flex, null, null, null, column) // Mantiene la imagen y el texto en fila
+  gap: 20px // Espacio entre la imagen y el contenido
+  width: 0 // Asegura que ocupe todo el espacio disponible
+  padding: 0 // Espacio interno adicional
+
+.baseizquierda
+  display: grid
+  grid-template-columns: 1fr 1fr
+  height: 0
+  .datos
     display: grid
-    grid-template-rows: column
-    margin-left: 20px
-    ul
-      display: block
-      padding: 0
+    grid-template-rows: 1fr
+    .datos1, .datos2
+      display: flex
+      flex-direction: horizontal
       margin: 0
-    li
-      display: block
-      margin-bottom: 10px
+      p
+        padding: 10px
 
-.barraizquierda
-  width: 0
+.fotoperfil
+  display: inline-block
+  width: 20px
+  height: auto
+  padding: 0
   margin: 0
-  float: left
-  ul
-    margin: 0px 0px 10px 0
-
-  li
-    margin-bottom: 10px
-    padding-: 0px
-    border: 10px
-    position: absolute
   img
-    width: 70px
-    height: 60px
+  height: 100px        // Mantiene la proporción de la imagen
+  padding: 20px
+  margin: 0
 
-  .barraizquierda2
-    width: 50px
-    margin: 0 auto
-    float: left
-    ul
-      margin: 0px
-    li
-      margin-bottom: 10px
-      padding-: 0px
-      border: 2px
-      position: absolute
-      left: 0
-      top: 0
 
-.datosdelperfil
-  @include display(flex, flex-start, null, null, row)
-  ul
-    @include display(flex, null, center, null, row)
-    padding: 0
-    margin: 20px
-    width: 100%
-  li
-    display: inline-block
-    padding: 10px
-    border: 1px
-    margin-right: 10px
+.basehistoria
+  gap: 0
+  padding: 0
+  margin: 0
+  width: 100%
+
+.contenedorhistoria
+  display: flex
+  flex-direction: horizontal
+
+.historias
+  display: flex
+  align-items: row
+  flex-direction: flex-start
+  margin: 20px 0 20px 10px
+  padding: 10px
+  width: 30px
+  height: 30px
+
+.fotospublicadas, img
+  display: flex
+  padding: 10px
+  width: 150px
