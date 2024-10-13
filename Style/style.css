@@ -1,67 +1,98 @@
-.contenedorbase {
-  display: grid;
-  grid-template-columns: 15% 85%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
 .contenedorizquierda {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  margin: 10px;
 }
 .contenedorizquierda div {
   margin: 10px 0;
+  padding: 20px;
+}
+
+.iconos {
+  margin: 4px 0px;
+  padding: 12px;
+}
+
+.baseicono {
+  margin-left: 0;
+  padding-left: 0;
+  left: 0;
+  position: relative;
+}
+.baseicono .iconos {
+  margin: 4 0 0 0;
+  padding: 12 12 12 0;
+  box-sizing: border-box;
+}
+
+.delmain {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 500;
+  padding: 50;
+  width: 85%;
+  height: 75%;
 }
 
 main {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: row;
-  width: 0;
-  padding: 0px;
+  align-items: center;
+  width: 105%;
+  padding: 20px;
 }
 
-.contenedorderecha {
+header {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 0;
-  padding: 0;
+  flex-direction: colums;
+  width: 100%;
+  padding: 0px 20px 20px 20px;
+  align-items: center;
+  direction: end;
+}
+header .baseizquierda {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+header .baseizquierda .fotoperfil {
+  margin-right: 10px;
+}
+header .basehistoria-foto {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
 }
 
-.baseizquierda {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 0;
-}
-.baseizquierda .datos {
+.datos {
   display: grid;
   grid-template-rows: 1fr;
 }
-.baseizquierda .datos .datos1, .baseizquierda .datos .datos2 {
+.datos .datos1, .datos .datos2 {
   display: flex;
   flex-direction: horizontal;
   margin: 0;
 }
-.baseizquierda .datos .datos1 p, .baseizquierda .datos .datos2 p {
+.datos .datos1 p, .datos .datos2 p {
   padding: 10px;
 }
 
-.fotoperfil {
-  display: inline-block;
-  width: 20px;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  height: 100px;
-  padding: 20px;
-  margin: 0;
-}
-.basehistoria {
-  gap: 0;
-  padding: 0;
-  margin: 0;
-  width: 100%;
+.datos3 {
+  padding: 5px 0 0 10px;
 }
 
 .contenedorhistoria {
@@ -75,12 +106,18 @@ main {
   flex-direction: flex-start;
   margin: 20px 0 20px 10px;
   padding: 10px;
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
 }
 
-.fotospublicadas, img {
+.publicaciones {
   display: flex;
-  padding: 10px;
-  width: 150px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 20px;
+}
+.publicaciones i, .publicaciones h5 {
+  display: flex;
+  flex-direction: file;
 }/*# sourceMappingURL=style.css.map */

@@ -7,30 +7,67 @@
     align-items: $align
     flex-direction: $direction
 
-.contenedorbase
-  @include display(grid, null, null, 15% 85%, null) // Dividir la barra lateral y el contenido en un grid
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  @include display(flex, null, null, 15% 85%, row)
+  margin: 0
+  padding: 0
+  height: 100vh
 
 .contenedorizquierda
-  @include display(flex, flex-start, null, null, column) // Alinear la barra lateral en columna
+  @include display(flex, flex-start, null, 15% 0%, column)
+  margin: 10px
   div
-    margin: 10px 0 // Espacio entre elementos
+    margin: 10px 0
+    padding: 20px
+.iconos
+  margin: 4px 0px
+  padding: 12px
+
+.baseicono
+  margin-left: 0
+  padding-left: 0
+  left: 0
+  position: relative
+  .iconos
+    margin: 4 0 0 0
+    padding: 12 12 12 0
+    box-sizing: border-box
+
+.delmain
+  @include display(flex, null, center, 100%, column)
+  margin: 500
+  padding: 50
+  width: 85%
+  height: 75%
 
 main
-  @include display(flex, flex-start, flex-start, null, row) // Alinea el contenido del main en fila
-  width: 0 // Asegura que ocupe todo el ancho
-  padding: 0px // Espacio alrededor del contenido
+  align-items: center
+  width: 105%
+  padding: 20px
 
-.contenedorderecha
-  @include display(flex, null, null, null, column) // Mantiene la imagen y el texto en fila
-  gap: 20px // Espacio entre la imagen y el contenido
-  width: 0 // Asegura que ocupe todo el espacio disponible
-  padding: 0 // Espacio interno adicional
+header
+  @include display(flex, null, null, null, colums)
+  width: 100%
+  padding: 0px 20px 20px 20px
+  align-items: center
+  direction: end
+  .baseizquierda
+    @include display(flex, null, center, null, null)
+    margin-bottom: 10px
+    .fotoperfil
+      margin-right: 10px
 
-.baseizquierda
-  display: grid
-  grid-template-columns: 1fr 1fr
-  height: 0
-  .datos
+  .basehistoria-foto
+    margin-top: 10px
+    display: flex
+    gap: 10px
+
+.datos
     display: grid
     grid-template-rows: 1fr
     .datos1, .datos2
@@ -39,24 +76,8 @@ main
       margin: 0
       p
         padding: 10px
-
-.fotoperfil
-  display: inline-block
-  width: 20px
-  height: auto
-  padding: 0
-  margin: 0
-  img
-  height: 100px        // Mantiene la proporción de la imagen
-  padding: 20px
-  margin: 0
-
-
-.basehistoria
-  gap: 0
-  padding: 0
-  margin: 0
-  width: 100%
+.datos3
+  padding: 5px 0 0 10px
 
 .contenedorhistoria
   display: flex
@@ -68,10 +89,15 @@ main
   flex-direction: flex-start
   margin: 20px 0 20px 10px
   padding: 10px
-  width: 30px
-  height: 30px
+  width: 100px
+  height: 100px
 
-.fotospublicadas, img
-  display: flex
-  padding: 10px
-  width: 150px
+.publicaciones
+  @include display(flex, center, center, null, row)
+  margin: 20px
+  i,h5
+    display: flex
+    flex-direction: file
+
+
+//reponsive///
