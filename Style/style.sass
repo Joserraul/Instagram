@@ -1,26 +1,103 @@
-*
-  font-family: "Roboto", serif
-  font-weight: 100
-  font-style: normal
-
-
-@mixin display ($display , $justify , $align , $column , $direction)
+@mixin display($display, $justify, $align, $column, $direction)
   display: $display
-  @if display == grid
+  @if $display == grid
     grid-template-columns: $column
-  @if display == flex
+  @if $display == flex
     justify-content: $justify
     align-items: $align
     flex-direction: $direction
-    
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
 body
-  @include display (grid, null, null, 15% 85%, null)
+  @include display(flex, null, null, 15% 85%, row)
+  margin: 0
+  padding: 0
+  height: 100vh
 
-li
-  list-style-type: none
+.contenedorizquierda
+  @include display(flex, flex-start, null, 15% 0%, column)
+  margin: 10px
+  div
+    margin: 10px 0
+    padding: 20px
+.iconos
+  margin: 4px 0px
+  padding: 12px
 
-.contenedorizquierdo
-  @include display (flex , space-between , start , 1fr, column)
+.baseicono
+  margin-left: 0
+  padding-left: 0
+  left: 0
+  position: relative
+  .iconos
+    margin: 4 0 0 0
+    padding: 12 12 12 0
+    box-sizing: border-box
 
-.contenedorderecho > div
-  @include display(grid, center, null, 1fr, vertical)
+.delmain
+  @include display(flex, null, center, 100%, column)
+  margin: 500
+  padding: 50
+  width: 85%
+  height: 75%
+
+main
+  align-items: center
+  width: 105%
+  padding: 20px
+
+header
+  @include display(flex, null, null, null, colums)
+  width: 100%
+  padding: 0px 20px 20px 20px
+  align-items: center
+  direction: end
+  .baseizquierda
+    @include display(flex, null, center, null, null)
+    margin-bottom: 10px
+    .fotoperfil
+      margin-right: 10px
+
+  .basehistoria-foto
+    margin-top: 10px
+    display: flex
+    gap: 10px
+
+.datos
+    display: grid
+    grid-template-rows: 1fr
+    .datos1, .datos2
+      display: flex
+      flex-direction: horizontal
+      margin: 0
+      p
+        padding: 10px
+.datos3
+  padding: 5px 0 0 10px
+
+.contenedorhistoria
+  display: flex
+  flex-direction: horizontal
+
+.historias
+  display: flex
+  align-items: row
+  flex-direction: flex-start
+  margin: 20px 0 20px 10px
+  padding: 10px
+  width: 100px
+  height: 100px
+
+.publicaciones
+  @include display(flex, center, center, null, row)
+  margin: 20px
+  i,h5
+    display: flex
+    flex-direction: file
+
+
+//reponsive///

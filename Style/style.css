@@ -1,21 +1,123 @@
 * {
-  font-family: "Roboto", serif;
-  font-weight: 100;
-  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  display: grid;
-}
-
-li {
-  list-style-type: none;
-}
-
-.contenedorizquierdo {
   display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
-.contenedorderecho > div {
+.contenedorizquierda {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 10px;
+}
+.contenedorizquierda div {
+  margin: 10px 0;
+  padding: 20px;
+}
+
+.iconos {
+  margin: 4px 0px;
+  padding: 12px;
+}
+
+.baseicono {
+  margin-left: 0;
+  padding-left: 0;
+  left: 0;
+  position: relative;
+}
+.baseicono .iconos {
+  margin: 4 0 0 0;
+  padding: 12 12 12 0;
+  box-sizing: border-box;
+}
+
+.delmain {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 500;
+  padding: 50;
+  width: 85%;
+  height: 75%;
+}
+
+main {
+  align-items: center;
+  width: 105%;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: colums;
+  width: 100%;
+  padding: 0px 20px 20px 20px;
+  align-items: center;
+  direction: end;
+}
+header .baseizquierda {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+header .baseizquierda .fotoperfil {
+  margin-right: 10px;
+}
+header .basehistoria-foto {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.datos {
   display: grid;
+  grid-template-rows: 1fr;
+}
+.datos .datos1, .datos .datos2 {
+  display: flex;
+  flex-direction: horizontal;
+  margin: 0;
+}
+.datos .datos1 p, .datos .datos2 p {
+  padding: 10px;
+}
+
+.datos3 {
+  padding: 5px 0 0 10px;
+}
+
+.contenedorhistoria {
+  display: flex;
+  flex-direction: horizontal;
+}
+
+.historias {
+  display: flex;
+  align-items: row;
+  flex-direction: flex-start;
+  margin: 20px 0 20px 10px;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.publicaciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 20px;
+}
+.publicaciones i, .publicaciones h5 {
+  display: flex;
+  flex-direction: file;
 }/*# sourceMappingURL=style.css.map */
